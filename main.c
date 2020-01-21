@@ -1,23 +1,21 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
-#include <stdio.h>
-void add();
-int main ()
+#include<stdio.h>
+int large(int x);
+int main()
 {
-  add();
-  return 0;
+    int a;
+    scanf("%d",&a);
+    printf("%d",large(a));
+    return 0;
 }
-void add()
+int large(int x)
 {
-    int a,b,c;
-    printf("enter the two numbers");
-    scanf("%d%d",&a,&b);
-    c=a+b;
-    printf("%d",c);
+    int b,max=0;
+    while(x!=0)
+    {
+        b=x%10;
+        if(b>max)
+        max=b;
+        x=x/10;
+    }
+    return max;
 }
